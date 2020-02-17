@@ -16,11 +16,16 @@ Page({
   },
 
 
+
   qiantuisubmit:function(event){
+    var time = util.formatTime(new Date());
+    this.setData({
+      time: time
+    });
     qiantui.add({
       data:{
         name: event.detail.value.title,
-        date: new Date(),
+        date: time,
       }
     }).then(res=>{
       wx.showToast({
@@ -28,6 +33,8 @@ Page({
         icon:'success'
       })
     })
+  },
+  onPullDownRefresh: function () {
+    wx.stopPullDownRefresh();
   }
-
 })
