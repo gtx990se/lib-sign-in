@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    time:null
+    time:[]
   },
 
   /**
@@ -22,9 +22,14 @@ Page({
   onReady: function () {
 
   },
+  onReachBottom:function(){
+    this.getdata();
+  },
   onPullDownRefresh: function () {
+    this.data.time=[];
+    this.pageData.skip = 0;
     this.getdata(res=>{
-      wx.stopPullDownRefresh();
+      wx.stopPullDownRefresh()
     });
   },
 
@@ -35,14 +40,19 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    qiantui.get().then(res => {
+    qiantui.skip(this.pageData.skip).get().then(res => {
+      let oldData=this.data.time;
       this.setData({
-        time: res.data
+        time: oldData.concat(res.data)
       },
       res=>{
+        this.pageData.skip = this.pageData.skip+20
         wx.hideLoading()
         callback();
       })
     })
+  },
+  pageData:{
+    skip:0
   }
 })
