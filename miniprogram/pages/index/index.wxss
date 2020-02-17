@@ -1,5 +1,5 @@
 .bigbutton1 {
-    width: 200rpx;
+    width: 400rpx;
     height: 250rpx;
     margin-top: 30%;
     background-color: rgb(41, 128, 0);
@@ -12,7 +12,7 @@
 }
 
 .bigbutton2 {
-    width: 200rpx;
+    width: 400rpx;
     height: 250rpx;
     margin-top: 25%;
     background-color: rgb(0, 162, 255);

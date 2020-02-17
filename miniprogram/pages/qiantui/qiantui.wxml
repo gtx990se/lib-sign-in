@@ -1,2 +1,8 @@
 <!--pages/qiantui/qiantui.wxml-->
 <text>here is 签退页面</text>
+
+<view>现在时间为{{time}}</view> 
+<form bindsubmit="qiantuisubmit">
+<input name="title"></input>
+<button form-type='submit'>确认签退</button>
+</form>

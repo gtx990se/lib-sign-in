@@ -5,7 +5,9 @@
     "pages/index2/index2",
     "pages/index3/index3",
     "pages/qiantui/qiantui",
-    "pages/qiandao/qiandao"
+    "pages/qiandao/qiandao",
+    "pages/test/test",
+    "pages/test2/test2"
   ],
   "tabBar": {
     "selectedColor": "#2BA245",
@@ -18,7 +20,7 @@
       },
       {
         "pagePath": "pages/index3/index3",
-        "text": "我的信息",
+        "text": "签到记录",
         "iconPath": "icons/rili.png",
         "selectedIconPath": "icons/rili1.png"
       }
@@ -28,10 +30,14 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "我最帅",
+    "navigationBarTitleText": "阳光志愿者协会图书馆活动",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index"
+  },
   "requiredBackgroundModes": [
     "audio",
     "location"
