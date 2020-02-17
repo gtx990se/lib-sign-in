@@ -3,7 +3,6 @@ const db=wx.cloud.database();
 const qiantui=db.collection('qiantuidate')
 Page({
   data:{
-  
   },
 
   onLoad: function (options) {
@@ -22,6 +21,15 @@ Page({
     this.setData({
       time: time
     });
+
+    if (!event.detail.value.title) {
+      wx.showModal({
+        title: '错误',
+        content: '请输入正确的姓名',
+        showCancel: false
+      })
+      return
+    }
     qiantui.add({
       data:{
         name: event.detail.value.title,
@@ -34,7 +42,4 @@ Page({
       })
     })
   },
-  onPullDownRefresh: function () {
-    wx.stopPullDownRefresh();
-  }
 })

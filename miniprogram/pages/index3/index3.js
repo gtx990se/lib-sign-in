@@ -13,11 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    qiantui.get().then(res=>{
-      this.setData({
-        time:res.data
-      })
-    })
+    this.getdata(res=>{});
   },
 
   /**
@@ -27,7 +23,26 @@ Page({
 
   },
   onPullDownRefresh: function () {
-    wx.stopPullDownRefresh();
-  }
+    this.getdata(res=>{
+      wx.stopPullDownRefresh();
+    });
+  },
 
+  getdata:function(callback){
+    if(!callback){
+      callback=res=>{}
+    }
+    wx.showLoading({
+      title: '加载中',
+    })
+    qiantui.get().then(res => {
+      this.setData({
+        time: res.data
+      },
+      res=>{
+        wx.hideLoading()
+        callback();
+      })
+    })
+  }
 })

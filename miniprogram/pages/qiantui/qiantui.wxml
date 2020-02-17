@@ -3,6 +3,6 @@
 
 <view>现在时间为{{time}}</view> 
 <form bindsubmit="qiantuisubmit">
-<input name="title"></input>
+<input name="title" placeholder="请输入姓名"></input>
 <button form-type='submit'>确认签退</button>
 </form>
