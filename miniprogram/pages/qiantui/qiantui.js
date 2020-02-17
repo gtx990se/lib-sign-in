@@ -1,6 +1,6 @@
 var util = require('../../utils/util.js'); 
 const db=wx.cloud.database();
-const qiantui=db.collection('qiantuidate')
+const qiantui=db.collection('datelist')
 Page({
   data:{
   },
@@ -25,7 +25,7 @@ Page({
     if (!event.detail.value.title) {
       wx.showModal({
         title: '错误',
-        content: '请输入正确的姓名',
+        content: '请输入姓名！',
         showCancel: false
       })
       return
@@ -34,6 +34,7 @@ Page({
       data:{
         name: event.detail.value.title,
         date: time,
+        sign:"签退",
       }
     }).then(res=>{
       wx.showToast({

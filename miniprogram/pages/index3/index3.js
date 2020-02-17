@@ -1,12 +1,12 @@
 const db = wx.cloud.database();
-const qiantui = db.collection('qiantuidate')
+const qiantui = db.collection('datelist')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time:[]
+    list:[]
   },
 
   /**
@@ -26,7 +26,7 @@ Page({
     this.getdata();
   },
   onPullDownRefresh: function () {
-    this.data.time=[];
+    this.data.list=[];
     this.pageData.skip = 0;
     this.getdata(res=>{
       wx.stopPullDownRefresh()
@@ -41,9 +41,9 @@ Page({
       title: '加载中',
     })
     qiantui.skip(this.pageData.skip).get().then(res => {
-      let oldData=this.data.time;
+      let oldData=this.data.list;
       this.setData({
-        time: oldData.concat(res.data)
+        list: oldData.concat(res.data)
       },
       res=>{
         this.pageData.skip = this.pageData.skip+20

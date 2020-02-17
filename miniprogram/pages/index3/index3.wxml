@@ -1,8 +1,9 @@
 <van-cell-group>
-  <block wx:for="{{time}}">
+  <block wx:for="{{list}}">
     <van-cell 
       title="{{item.date}}" 
       value="{{item.name}}"
+      label="{{item.sign}}"
     />
     </block>
 </van-cell-group>
