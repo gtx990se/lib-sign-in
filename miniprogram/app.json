@@ -1,0 +1,40 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/index2/index2",
+    "pages/index3/index3",
+    "pages/qiantui/qiantui",
+    "pages/qiandao/qiandao"
+  ],
+  "tabBar": {
+    "selectedColor": "#2BA245",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "签到/签退",
+        "iconPath": "icons/qiandao.png",
+        "selectedIconPath": "icons/qiandao1.png"
+      },
+      {
+        "pagePath": "pages/index3/index3",
+        "text": "我的信息",
+        "iconPath": "icons/rili.png",
+        "selectedIconPath": "icons/rili1.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "我最帅",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

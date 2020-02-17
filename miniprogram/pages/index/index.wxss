@@ -1,0 +1,30 @@
+.bigbutton1 {
+    width: 200rpx;
+    height: 250rpx;
+    margin-top: 30%;
+    background-color: rgb(41, 128, 0);
+    color: white;
+    border-radius: 3000rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigbutton2 {
+    width: 200rpx;
+    height: 250rpx;
+    margin-top: 25%;
+    background-color: rgb(0, 162, 255);
+    color: white;
+    border-radius: 3000rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigtext {
+    font-weight: 400;
+    font-size: 50rpx;
+}
