@@ -1,8 +1,8 @@
 <!--pages/qiantui/qiantui.wxml-->
 <text>here is 签到页面</text>
 
-<view>现在时间为{{time}}</view> 
+<view>现在时间为{{time}}</view>
 <form bindsubmit="qiantuisubmit">
-<input name="title" placeholder="请输入姓名"></input>
-<button form-type='submit'>确认签到</button>
+  <input name="title" placeholder="请输入姓名"></input>
+  <button form-type='submit'>确认签到</button>
 </form>

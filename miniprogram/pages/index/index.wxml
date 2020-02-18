@@ -1,6 +1,6 @@
-<button class='bigbutton1' bindtap = "qiandao">
+<button class='bigbutton1' bindtap="qiandao">
   <view class="bigtext" hover-class="none" hover-stop-propagation="false">签 到</view>
 </button>
-<button class='bigbutton2' bindtap = "qiantui">
+<button class='bigbutton2' bindtap="qiantui">
   <view class="bigtext" hover-class="none" hover-stop-propagation="false">签 退</view>
 </button>

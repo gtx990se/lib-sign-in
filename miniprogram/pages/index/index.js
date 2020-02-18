@@ -3,30 +3,30 @@ Page({
   data: {
 
   },
-  qiandao: function () {
+  qiandao: function() {
     wx.navigateTo({
       url: '../qiandao/qiandao',
-      success: function (res) {
+      success: function(res) {
         // success
       },
-      fail: function () {
+      fail: function() {
         // fail
       },
-      complete: function () {
+      complete: function() {
         // complete
       }
     })
   },
-  qiantui: function () {
+  qiantui: function() {
     wx.navigateTo({
       url: '../qiantui/qiantui',
-      success: function (res) {
+      success: function(res) {
         // success
       },
-      fail: function () {
+      fail: function() {
         // fail
       },
-      complete: function () {
+      complete: function() {
         // complete
       }
     })
