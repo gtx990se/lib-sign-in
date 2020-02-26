@@ -70,7 +70,14 @@ Page({
     }).then(res => {
       wx.showToast({
         title: '签到成功!',
-        icon: 'success'
+        icon: 'success',
+        success: function () {
+          setTimeout(function () {
+            wx.navigateBack({
+              delta: 1
+            })
+          }, 1500);
+        }
       })
     })
   }

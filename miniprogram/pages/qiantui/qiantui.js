@@ -60,7 +60,7 @@ Page({
         showCancel: false
       })
       return
-    }
+    };
     qiantui.add({
       data: {
         name: event.detail.value.title,
@@ -70,7 +70,14 @@ Page({
     }).then(res => {
       wx.showToast({
         title: '签退成功!',
-        icon: 'success'
+        icon: 'success' ,
+        success: function () {
+          setTimeout(function () {
+            wx.navigateBack({
+              delta: 1
+            })
+          }, 1500);
+        }
       })
     })
   }
