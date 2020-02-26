@@ -37,7 +37,7 @@ Page({
         this.pageData.locationObj = locationObj
       },
     })
-    if (!event.detail.value.title) {
+    if (!event.detail.value.name) {
       wx.showModal({
         title: '错误',
         content: '请输入姓名！',
@@ -63,7 +63,7 @@ Page({
     };
     qiantui.add({
       data: {
-        name: event.detail.value.title,
+        name: event.detail.value.name,
         date: time,
         sign: "签退",
       }
