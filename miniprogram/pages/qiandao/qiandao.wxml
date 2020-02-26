@@ -1,4 +1,5 @@
 <!--pages/qiantui/qiantui.wxml-->
+<van-notice-bar mode="closeable" text="大家在签到时只需要点一下按钮即可，严禁重复点击！" />
 <text>\n</text>
 <text>\n</text>
 <view>现在签到的话，签到时间为{{time}}噢</view>

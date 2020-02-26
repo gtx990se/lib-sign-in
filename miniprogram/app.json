@@ -33,7 +33,9 @@
   },
   "usingComponents": {
     "van-cell": "@vant/weapp/cell",
-    "van-cell-group": "@vant/weapp/cell-group"
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-notice-bar": "@vant/weapp/notice-bar",
+    "van-icon": "@vant/weapp/icon/index"
   },
   "requiredBackgroundModes": [
     "audio",
