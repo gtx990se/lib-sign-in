@@ -3,7 +3,9 @@ const db = wx.cloud.database();
 const qiantui = db.collection('datelist')
 Page({
   data: {},
-
+  pageData: {
+    locationObj:{}
+  },
   onLoad: function(options) {
     // 调用函数时，传入new Date()参数，返回值是日期和时间  
     var time = util.formatTime(new Date());
@@ -11,17 +13,32 @@ Page({
     this.setData({
       time: time
     });
+    wx.getLocation({
+      success: res => {
+        let locationObj = {
+          latitude: res.latitude,
+          longitude: res.longitude
+        }
+        this.pageData.locationObj = locationObj
+      },
+    })
   },
-
-
-
   qiantuisubmit: function(event) {
     var time = util.formatTime(new Date());
     this.setData({
       time: time
     });
+    wx.getLocation({
+      success: res => {
+        let locationObj = {
+          latitude: res.latitude,
+          longitude: res.longitude
+        }
+        this.pageData.locationObj=locationObj
+      },
+    })
 
-    if (!event.detail.value.title) {
+    if (this.pageData.locationObj) {
       wx.showModal({
         title: '错误',
         content: '请输入姓名！',
@@ -29,6 +46,7 @@ Page({
       })
       return
     }
+ 
     qiantui.add({
       data: {
         name: event.detail.value.title,
@@ -41,5 +59,5 @@ Page({
         icon: 'success'
       })
     })
-  },
+  }
 })
