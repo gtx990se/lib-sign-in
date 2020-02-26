@@ -53,14 +53,6 @@ Page({
       })
       return
     }
-    if (this.pageData.locationObj.latitude < 43.9135996100 || this.pageData.locationObj.latitude > 43.9522933900 || this.pageData.locationObj.longitude < 125.2946090700 || this.pageData.locationObj.longitude > 125.3478241000) {
-      wx.showModal({
-        title: '错误',
-        content: '检测到地理位置错误！',
-        showCancel: false
-      })
-      return
-    };
     qiantui.add({
       data: {
         name: event.detail.value.name,
