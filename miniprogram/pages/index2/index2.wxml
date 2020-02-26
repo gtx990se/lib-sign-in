@@ -1,2 +1,13 @@
-<!--pages/index2/index2.wxml-->
-<text>pages/index2/index2.wxml</text>
+<!--pages/qiantui/qiantui.wxml-->
+<text>\n</text>
+<text>\n</text>
+<view>现在签到的话，签到时间为{{time}}噢</view>
+<text>\n</text>
+<text>\n</text>
+
+<form bindsubmit="qiandaosubmit">
+  <input name="name" placeholder="      请输入姓名" ></input>
+  <button class='bigbutton1' form-type='submit'>
+   <view class="bigtext" hover-class="none" hover-stop-propagation="false">确认签到</view>
+  </button>
+</form>

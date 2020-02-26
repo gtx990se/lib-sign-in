@@ -70,13 +70,13 @@ Page({
     }).then(res => {
       wx.showToast({
         title: '签退成功!',
-        icon: 'success' ,
-        success: function () {
-          setTimeout(function () {
+        icon: 'success',
+        success: function() {
+          setTimeout(function() {
             wx.navigateBack({
               delta: 1
             })
-          }, 1500);
+          }, 1000);
         }
       })
     })

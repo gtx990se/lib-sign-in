@@ -1,1 +1,40 @@
 /* pages/qiandao/qiandao.wxss */
+.bigbutton1 {
+    width: 330rpx;
+    height: 330rpx;
+    margin-top: 20%;
+    background-color: rgb(255, 145, 0);
+    color: white;
+    border-radius: 3000rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.bigbutton2 {
+    width: 330rpx;
+    height: 330rpx;
+    margin-top: 20%;
+    background-color: rgb(0, 160, 255);
+    color: white;
+    border-radius: 3000rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.bigtext {
+    font-weight: 400;
+    font-size: 50rpx;
+}
+.bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}

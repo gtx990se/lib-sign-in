@@ -1,6 +1,6 @@
 var util = require('../../utils/util.js');
 const db = wx.cloud.database();
-const qiantui = db.collection('datelist')
+const qiandao = db.collection('datelist')
 Page({
   data: {},
   pageData: {
@@ -23,7 +23,7 @@ Page({
       },
     })
   },
-  qiantuisubmit: function(event) {
+  qiandaosubmit: function(event) {
     var time = util.formatTime(new Date());
     this.setData({
       time: time
@@ -61,7 +61,7 @@ Page({
       })
       return
     }
-    qiantui.add({
+    qiandao.add({
       data: {
         name: event.detail.value.name,
         date: time,
@@ -76,7 +76,7 @@ Page({
             wx.navigateBack({
               delta: 1
             })
-          }, 1500);
+          }, 1000);
         }
       })
     })
