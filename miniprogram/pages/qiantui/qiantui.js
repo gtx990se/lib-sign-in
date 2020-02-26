@@ -45,7 +45,7 @@ Page({
       })
       return
     }
-    if (!this.pageData.locationObj.latitude) {
+    if (!this.pageData.locationObj.latitude || !this.pageData.locationObj.longitude) {
       wx.showModal({
         title: '错误',
         content: '请打开定位！',
@@ -53,39 +53,7 @@ Page({
       })
       return
     }
-    if (!this.pageData.locationObj.longitude) {
-      wx.showModal({
-        title: '错误',
-        content: '请打开定位！',
-        showCancel: false
-      })
-      return
-    }
-    if (this.pageData.locationObj.latitude < 43.9135996100) {
-      wx.showModal({
-        title: '错误',
-        content: '检测到地理位置错误！',
-        showCancel: false
-      })
-      return
-    }
-    if (this.pageData.locationObj.latitude > 43.9522933900) {
-      wx.showModal({
-        title: '错误',
-        content: '检测到地理位置错误！',
-        showCancel: false
-      })
-      return
-    }
-    if (this.pageData.locationObj.longitude < 125.2946090700) {
-      wx.showModal({
-        title: '错误',
-        content: '检测到地理位置错误！',
-        showCancel: false
-      })
-      return
-    }
-    if (this.pageData.locationObj.longitude > 125.3478241000) {
+    if (this.pageData.locationObj.latitude < 43.9135996100 || this.pageData.locationObj.latitude > 43.9522933900 || this.pageData.locationObj.longitude < 125.2946090700 || this.pageData.locationObj.longitude > 125.3478241000) {
       wx.showModal({
         title: '错误',
         content: '检测到地理位置错误！',
@@ -98,7 +66,6 @@ Page({
         name: event.detail.value.title,
         date: time,
         sign: "签退",
-        location: this.pageData.locationObj
       }
     }).then(res => {
       wx.showToast({
