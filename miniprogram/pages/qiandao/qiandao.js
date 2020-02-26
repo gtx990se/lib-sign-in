@@ -4,7 +4,7 @@ const qiantui = db.collection('datelist')
 Page({
   data: {},
   pageData: {
-    locationObj:{}
+    locationObj: {}
   },
   onLoad: function(options) {
     // 调用函数时，传入new Date()参数，返回值是日期和时间  
@@ -34,11 +34,10 @@ Page({
           latitude: res.latitude,
           longitude: res.longitude
         }
-        this.pageData.locationObj=locationObj
+        this.pageData.locationObj = locationObj
       },
     })
-
-    if (this.pageData.locationObj) {
+    if (!event.detail.value.title) {
       wx.showModal({
         title: '错误',
         content: '请输入姓名！',
@@ -46,12 +45,60 @@ Page({
       })
       return
     }
- 
+    if (!this.pageData.locationObj.latitude) {
+      wx.showModal({
+        title: '错误',
+        content: '请打开定位！',
+        showCancel: false
+      })
+      return
+    }
+    if (!this.pageData.locationObj.longitude) {
+      wx.showModal({
+        title: '错误',
+        content: '请打开定位！',
+        showCancel: false
+      })
+      return
+    }
+    if (this.pageData.locationObj.latitude < 43.8714157401) {
+      wx.showModal({
+        title: '错误',
+        content: '检测到地理位置错误！',
+        showCancel: false
+      })
+      return
+    }
+    if (this.pageData.locationObj.latitude > 43.9227499305) {
+      wx.showModal({
+        title: '错误',
+        content: '检测到地理位置错误！',
+        showCancel: false
+      })
+      return
+    }
+    if (this.pageData.locationObj.longitude < 125.2401924133) {
+      wx.showModal({
+        title: '错误',
+        content: '检测到地理位置错误！',
+        showCancel: false
+      })
+      return
+    }
+    if (this.pageData.locationObj.longitude > 125.3026771545) {
+      wx.showModal({
+        title: '错误',
+        content: '检测到地理位置错误！',
+        showCancel: false
+      })
+      return
+    }
     qiantui.add({
       data: {
         name: event.detail.value.title,
         date: time,
         sign: "签到",
+        location:this.pageData.locationObj
       }
     }).then(res => {
       wx.showToast({
