@@ -3,8 +3,7 @@
 <text>\n</text>
 <text>\n</text>
 <view>现在签退的话，签退时间为{{time}}噢</view>
-<text>\n</text>
-<text>\n</text>
+<image style="width:160rpx; height:160rpx;" src='/icons/d_33.png'></image>
 <text>请在下方输入姓名</text>
 <form bindsubmit="qiantuisubmit">
   <view class="bar">
