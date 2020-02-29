@@ -53,14 +53,7 @@ Page({
       })
       return
     }
-    if (this.pageData.locationObj.latitude < 43.8714157401 || this.pageData.locationObj.latitude > 43.9227499305 || this.pageData.locationObj.longitude < 125.2401924133 || this.pageData.locationObj.longitude > 125.3026771545) {
-      wx.showModal({
-        title: '错误',
-        content: '检测到地理位置错误！',
-        showCancel: false
-      })
-      return
-    }
+
     qiandao.add({
       data: {
         name: event.detail.value.name,
