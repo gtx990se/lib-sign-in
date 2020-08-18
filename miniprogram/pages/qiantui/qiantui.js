@@ -24,6 +24,10 @@ Page({
     })
   },
   qiantuisubmit: function(event) {
+    wx.showLoading({
+      title: '加载中',
+      mask:true
+    })
     var time = util.formatTime(new Date());
     this.setData({
       time: time
@@ -37,6 +41,7 @@ Page({
         this.pageData.locationObj = locationObj
       },
     })
+    wx.hideLoading()
     if (!event.detail.value.name) {
       wx.showModal({
         title: '错误',
