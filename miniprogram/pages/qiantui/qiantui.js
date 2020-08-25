@@ -58,13 +58,13 @@ Page({
       }) 
       return 
     } 
-    if (this.pageData.locationObj.latitude < 43.82340 || this.pageData.locationObj.latitude > 43.82681 || this.pageData.locationObj.longitude < 125.26775 || this.pageData.locationObj.longitude > 125.27114) { 
-      wx.showModal({ 
-        title: '错误', 
-        content: '检测到地理位置错误！', 
-        showCancel: false 
-      }) 
-      return 
+    if (this.pageData.locationObj.latitude < 43.8218 || this.pageData.locationObj.latitude > 43.8238 || this.pageData.locationObj.longitude < 125.262 || this.pageData.locationObj.longitude > 125.264) {  
+      wx.showModal({  
+        title: '错误',  
+        content: '检测到地理位置错误！',  
+        showCancel: false  
+      })  
+      return  
     } 
     
     qiantui.add({
@@ -72,6 +72,8 @@ Page({
         name: event.detail.value.name,
         date: time,
         sign: "签退",
+        latitude:this.pageData.locationObj.latitude,
+        longitude:this.pageData.locationObj.longitude,
       }
     }).then(res => {
       wx.showToast({

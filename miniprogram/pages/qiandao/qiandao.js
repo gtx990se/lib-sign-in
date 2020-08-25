@@ -72,6 +72,8 @@ Page({
         name: event.detail.value.name,
         date: time,
         sign: "签到",
+        latitude:this.pageData.locationObj.latitude,
+        longitude:this.pageData.locationObj.longitude,
       }
     }).then(res => {
       wx.showToast({
