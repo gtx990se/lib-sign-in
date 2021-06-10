@@ -47,7 +47,6 @@ Page({
       })
       return
     }
-
     qiandao.add({
       data: {
         name: event.detail,

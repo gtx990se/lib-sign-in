@@ -4,7 +4,9 @@
 <text>\n</text>
 <view>现在签到的话，签到时间为{{time}}噢</view>
 <image style="width:160rpx; height:160rpx;" src='/icons/d_19.png'></image>
-<text>请在下方输入姓名</text>
+<text>请在下方输入报名时填写的姓名
+(❗非报名时姓名签到无效❗)
+(❗填写除姓名以外的任何文字签到无效谈好❗)</text>
 <form bindsubmit="qiandaosubmit">
   <view class="bar">
     <input name="name" placeholder="输入姓名"></input>

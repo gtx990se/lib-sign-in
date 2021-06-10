@@ -1,4 +1,6 @@
+<view>{{notice}}</view>
 <van-cell-group>
+  <van-notice-bar mode="closeable" text='{{notice}}'/>
   <block wx:for="{{list}}">
     <van-cell title="{{item.date}}" value="{{item.name}}" label="{{item.sign}}" />
   </block>

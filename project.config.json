@@ -26,7 +26,16 @@
 		},
 		"useIsolateContext": true,
 		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"useMultiFrameRuntime": true,
+		"useApiHook": true,
+		"useApiHostProcess": true,
+		"enableEngineNative": false,
+		"bundle": false,
+		"userConfirmedBundleSwitch": false,
+		"packNpmManually": false,
+		"packNpmRelationList": [],
+		"minifyWXSS": true
 	},
 	"appid": "wx08ef58930f19c511",
 	"projectname": "JLU-lib",
@@ -36,26 +45,21 @@
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
-			"current": -1,
 			"list": []
 		},
 		"conversation": {
-			"current": -1,
 			"list": []
 		},
 		"plugin": {
-			"current": -1,
 			"list": []
 		},
 		"game": {
 			"list": []
 		},
 		"gamePlugin": {
-			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
 			"list": [
 				{
 					"id": -1,
